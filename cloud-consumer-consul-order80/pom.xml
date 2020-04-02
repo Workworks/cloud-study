@@ -9,29 +9,14 @@
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
-    <artifactId>cloud-consumer-zk-order80</artifactId>
+    <artifactId>cloud-consumer-consul-order80</artifactId>
 
 
     <dependencies>
-        <!--zookeeper 和 日志-->
-        <dependency>
-            <groupId>ch.qos.logback</groupId>
-            <artifactId>logback-classic</artifactId>
-        </dependency>
+        <!--springCloud consul server相关-->
         <dependency>
             <groupId>org.springframework.cloud</groupId>
-            <artifactId>spring-cloud-starter-zookeeper-discovery</artifactId>
-            <exclusions>
-                <exclusion>
-                    <groupId>org.apache.zookeeper</groupId>
-                    <artifactId>zookeeper</artifactId>
-                </exclusion>
-            </exclusions>
-        </dependency>
-        <dependency>
-            <groupId>org.apache.zookeeper</groupId>
-            <artifactId>zookeeper</artifactId>
-            <version>3.4.9</version>
+            <artifactId>spring-cloud-starter-consul-discovery</artifactId>
         </dependency>
 
         <!--springboot整合web相关-->

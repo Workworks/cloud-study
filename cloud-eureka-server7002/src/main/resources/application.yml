@@ -1,30 +1,18 @@
 server:
   port: 7002
 
-spring:
-  datasource:
-    url: jdbc:mysql://localhost:3306/clouddb?useUnicode=true&charsetEncoding=utf8
-    username: root
-    password: 1314qawsed
-    driver-class-name: org.gjt.mm.mysql.Driver
-
-  jpa:
-    database: mysql
-    show-sql: true
-    generate-ddl: true
-    hibernate:
-      ddl-auto: update
-
-
-
 eureka:
   instance:
     hostname: eureka7002.com #eureka服务端的实例名称
+  #  server:
+  #    #关闭自我保护
+  #    enable-self-preservation: false
+  #    eviction-interval-timer-in-ms: 2000
   client:
     #false 表示不向注册中心注册自己
     register-with-eureka: false
     fetch-registry: false
     serviceUrl:
-      #设置与Eureka Server交互的地址查询服务和注册服务都需要依赖这个地址
+      #设置与Eureka Server交互的地址查询服务和注册服务都需要依赖这个地址（互相组注册）
       defaultZone: http://eureka7001.com:7001/eureka/
 

@@ -1,7 +1,7 @@
 package com.kfaino.repository;
 
 import com.kfaino.entity.Payment;
-import com.kfaino.PaymentApplication8081;
+import com.kfaino.ProviderMain8081;
 import org.junit.Assert;
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -12,7 +12,7 @@ import org.springframework.test.context.junit4.SpringRunner;
 
 
 @RunWith(SpringRunner.class)
-@SpringBootTest(classes = PaymentApplication8081.class)
+@SpringBootTest(classes = ProviderMain8081.class)
 public class PaymentRepositoryTest {
 
     @Autowired
